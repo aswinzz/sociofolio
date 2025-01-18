@@ -5,7 +5,7 @@ import './styles.css';
 import Auth from './auth/auth';
 import Callback from './pages/callback';
 import client from "./apollo";
-import { ApolloProvider } from "react-apollo";
+import { ApolloProvider from "react-apollo";
 import Config from './pages/config';
 import Profile from './pages/profile';
 import {  Segment, Header, Grid, Responsive , List, Card, Icon, Image, Menu,Container } from 'semantic-ui-react';
@@ -20,9 +20,9 @@ import {
 
 const auth = new Auth();
 
-const handleAuthentication = (nextState, replace) => {
+const handleAuthentication = (nextState, replace => {
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
-    auth.handleAuthentication();
+    auth.handleAuthentication());
   }
 }
 
